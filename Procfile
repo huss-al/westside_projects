@@ -1,1 +1,1 @@
-web: gunicorn westside-projects.wsgi
+web: gunicorn westside_projects.wsgi
