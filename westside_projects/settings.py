@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url  # Import this at the top of your settings.py
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +28,7 @@ SECRET_KEY = "django-insecure-=t6&wjk)nr_-@tued=dhf!9beska5v#fdhtyr92#h$fn0yw-o!
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    'westside-projects-56c3e6a154e5.herokuapp.com',  # Add your Heroku app domain
     '.herokuapp.com',
 ]
 
@@ -80,11 +83,15 @@ WSGI_APPLICATION = "westside_projects.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    'default': dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/NAME')
 }
 
 
@@ -133,9 +140,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Cloudinary settings
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': '<your_cloud_name>',
-    'API_KEY': '<your_api_key>',
-    'API_SECRET': '<your_api_secret>',
+    'CLOUD_NAME': 'dqo3vn07c',
+    'API_KEY': '242484246215387',
+    'API_SECRET': 'bka3NVrGVNU8D5G5HlZzsKL9mUs',
 }
 
 MEDIA_URL = '/media/'
