@@ -28,7 +28,6 @@ SECRET_KEY = "django-insecure-=t6&wjk)nr_-@tued=dhf!9beska5v#fdhtyr92#h$fn0yw-o!
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'westside-projects-56c3e6a154e5.herokuapp.com',  # Add your Heroku app domain
     '.herokuapp.com',
 ]
 
@@ -91,7 +90,7 @@ WSGI_APPLICATION = "westside_projects.wsgi.application"
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/NAME')
+    'default': dj_database_url.config(default='postgres://localhost')
 }
 
 
