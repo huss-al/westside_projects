@@ -1,0 +1,231 @@
+body {
+    font-family: 'Libre Baskerville', sans-serif; /* Replace 'Roboto' with the name of your chosen font */
+}
+
+
+/*************************** Navbar Section Styling */
+.navbar-section {
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the navbar */
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect for better appearance */
+    -webkit-backdrop-filter: blur(20px); /* For Safari */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Add a subtle border */
+    z-index: 2; /* Ensure it is above other content */
+    padding: 0;
+    padding-top: 10px;
+}
+
+/* Ensure the logo fits well */
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+/****************************** Navbar Toggler Icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='4' d='M5 7h20M5 15h20M5 23h20'/%3E%3C/svg%3E");
+    background-color: transparent;
+}
+
+/* Optional: Adjust the toggler button itself if needed */
+.navbar-toggler {
+    border-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: auto; /* Ensure the toggler is aligned to the right */
+}
+
+/* Remove focus outline for better appearance */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Adjust text color to improve readability on transparent background */
+.navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.8); /* Adjust text color */
+    transition: color 0.3s, padding 0.3s; /* Smooth transition for hover effect */
+    padding: 10px 15px; /* Add some padding for better spacing */
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active {
+    color: #D4AF37 !important; /* Color for active link */
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+    color: rgba(249, 247, 247, 0.6); /* Slightly lighter color on hover */
+    background-color: rgba(212, 175, 55, 0.1); /* Subtle background color on hover */
+    border-radius: 5px; /* Rounded corners for the hover background */
+    padding: 10px 20px; /* Increase padding on hover for a button-like effect */
+}
+
+
+
+.dropdown-item.active {
+    background-color: rgba(212, 175, 55, 0.9); /* Less transparency on hover */
+}
+
+
+/****************************** Footer Section Styling */
+footer {
+    position: relative;
+    z-index: 1; /* Ensure it's above the background image */
+    background-color: rgba(255, 255, 255, 0.9); /* Match the navbar background */
+    color: #000000; /* White text color for visibility */
+    padding-bottom: 0;
+}
+
+/* Footer section styling */
+.footer-section {
+    padding: 0 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Vertical lines between sections */
+    min-height: 120px; /* Ensure each section has a consistent height */
+    color: #000000; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+/* Adjust the logo size in the footer */
+.footer-section .navbar-brand img {
+    max-height: 120px; /* Set a maximum height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Social icons styling */
+.social-icons a {
+    color: #030303; /* White color for icons */
+    font-size: 30px; /* Size of the icons */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: #d2b157; /* Change color on hover */
+}
+
+/* Map container styling */
+.map-container {
+    margin-top: 10px; /* Space between title and map */
+    width: 100%; /* Ensure map takes full width */
+    position: relative;
+    padding-top: 56.25%; /* Aspect ratio for 16:9 */
+    height: 170px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure iframe takes full width */
+    height: 100%; /* Ensure iframe takes full height */
+    border: 0; /* Remove border from iframe */
+    border-radius: 5px; /* Optional: Add rounded corners to the iframe */
+}
+
+/**************************** Footer Lists Styling */
+footer .list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #000000; /* Ensure white text color for links */
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 12px;
+}
+
+/* Footer links color */
+.footer-section ul.list-unstyled li a {
+    color: #000000 !important; /* Ensure links are white */
+    text-decoration: none !important; /* Remove underline from links */
+}
+
+/* Change link color on hover */
+.footer-section ul.list-unstyled li a:hover {
+    color: #ffd000 !important; /* Change color on hover */
+}
+
+.no-border-right .footer-section {
+    border-right: none; /* Remove the right border for this specific column */
+}
+
+/* Ensure proper styling for the footer section in this column */
+.no-border-right {
+    border-right: none; /* Remove right border for this column */
+}
+
+.no-padding-x {
+    padding-left: 0 !important; /* Remove left padding */
+    padding-right: 0 !important; /* Remove right padding */
+}
+
+.email {
+    font-size: 15px;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .footer-section {
+        text-align: center;
+        border-right: none; /* Remove vertical lines on smaller screens */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Horizontal lines between sections */
+        padding-bottom: 10px;
+    }
+
+    .col-md-3 {
+        margin-bottom: 30px; /* Space between columns */
+    }
+
+    .footer-section .navbar-brand img {
+        max-height: 60px; /* Adjust logo size for small screens */
+    }
+
+    footer .list-unstyled li {
+        font-size: 16px;
+    }
+    /* Increase font size for "Contact Us" specifically */
+        .footer-section h4, /* Target the "Contact Us" header */
+        .footer-section .list-unstyled li { /* Target all list items in the footer section */
+            font-size: 15px; /* Adjust the size as needed */
+        }
+}
+
+/* Desktop Adjustments */
+@media (max-width: 1024px) {
+    .footer-section {
+        padding: 10px; /* Adjust padding for larger screens */
+    }
+    
+    .navbar-brand img {
+        height: 50px; /* Increase logo size in navbar */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem; /* Increase font size of nav links */
+        padding: 10px 30px !important; /* Adjust padding for better spacing */
+    }
+
+    .email {
+        font-size: 15px;
+    }
+
+    footer .list-unstyled li {
+        font-size: 9.5px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navbar-nav .nav-link {
+        font-size: 1.2rem; /* Increase font size of nav links */
+        padding: 10px 30px !important; /* Adjust padding for better spacing */
+    }
+}
