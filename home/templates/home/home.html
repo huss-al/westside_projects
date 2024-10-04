@@ -15,17 +15,19 @@
 </div>
 
 <script>
-    window.addEventListener('scroll', function() {
-        const content = document.getElementById('main-content');
-        const contentPosition = content.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight;
+    document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('scroll', function() {
+            const content = document.getElementById('main-content');
+            const contentPosition = content.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight;
 
-        // Check if the content is in the viewport
-        if (contentPosition < screenPosition) {
-            setTimeout(() => {
-                content.classList.add('visible');
-            }, 900); // Delay in milliseconds (500 ms = 0.5 seconds)
-        }
+            // Check if the content is in the viewport
+            if (contentPosition < screenPosition) {
+                setTimeout(() => {
+                    content.classList.add('visible');
+                }, 900); // Delay in milliseconds
+            }
+        });
     });
 </script>
 {% endblock %}

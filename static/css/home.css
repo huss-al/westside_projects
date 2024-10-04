@@ -35,7 +35,7 @@ body {
     text-align: center;
     opacity: 0; /* Initially hidden */
     transform: translateY(5px); /* Slightly move down */
-    transition: opacity 0.9s ease, transform 0.9s ease; /* Smooth transition */
+    transition: opacity 4s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
 }
 
 .content h2 {
