@@ -1,24 +1,22 @@
 body {
-    font-family: 'Libre Baskerville', sans-serif; /* Replace 'Roboto' with the name of your chosen font */
+    font-family: 'Libre Baskerville', sans-serif;
 }
-
 
 /*************************** Navbar Section Styling */
 .navbar-section {
-    position: fixed; /* Keep the navbar fixed at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the navbar */
-    backdrop-filter: blur(10px); /* Optional: Add a blur effect for better appearance */
-    -webkit-backdrop-filter: blur(20px); /* For Safari */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Add a subtle border */
-    z-index: 2; /* Ensure it is above other content */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 2;
     padding: 0;
     padding-top: 10px;
 }
 
-/* Ensure the logo fits well */
+/* Logo size */
 .navbar-brand img {
     height: 40px;
 }
@@ -33,89 +31,81 @@ body {
     background-color: transparent;
 }
 
-/* Optional: Adjust the toggler button itself if needed */
 .navbar-toggler {
     border-color: transparent;
     border: none;
     outline: none;
-    margin-left: auto; /* Ensure the toggler is aligned to the right */
+    margin-left: auto;
 }
 
-/* Remove focus outline for better appearance */
 .navbar-toggler:focus {
     box-shadow: none;
 }
 
-/* Adjust text color to improve readability on transparent background */
+/* Navbar links */
 .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.8); /* Adjust text color */
-    transition: color 0.3s, padding 0.3s; /* Smooth transition for hover effect */
-    padding: 10px 15px; /* Add some padding for better spacing */
+    color: rgba(0, 0, 0, 0.8);
+    transition: color 0.3s, padding 0.3s;
+    padding: 10px 15px;
     font-weight: 600;
 }
 
 .navbar-nav .nav-link.active {
-    color: #D4AF37 !important; /* Color for active link */
+    color: #D4AF37 !important;
 }
 
-/* Hover effect for navbar links */
 .navbar-nav .nav-link:hover {
-    color: rgba(249, 247, 247, 0.6); /* Slightly lighter color on hover */
-    background-color: rgba(212, 175, 55, 0.1); /* Subtle background color on hover */
-    border-radius: 5px; /* Rounded corners for the hover background */
-    padding: 10px 20px; /* Increase padding on hover for a button-like effect */
+    color: rgba(249, 247, 247, 0.6);
+    background-color: rgba(212, 175, 55, 0.1);
+    border-radius: 5px;
+    padding: 10px 20px;
 }
-
-
 
 .dropdown-item.active {
-    background-color: rgba(212, 175, 55, 0.9); /* Less transparency on hover */
+    background-color: rgba(212, 175, 55, 0.9);
 }
-
 
 /****************************** Footer Section Styling */
 footer {
     position: relative;
-    z-index: 1; /* Ensure it's above the background image */
-    background-color: rgba(255, 255, 255, 0.9); /* Match the navbar background */
-    color: #000000; /* White text color for visibility */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000;
     padding-bottom: 0;
 }
 
-/* Footer section styling */
 .footer-section {
     padding: 0 15px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Vertical lines between sections */
-    min-height: 120px; /* Ensure each section has a consistent height */
-    color: #000000; /* White text color */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 120px;
+    color: #000000;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center;
 }
 
-/* Adjust the logo size in the footer */
 .footer-section .navbar-brand img {
-    max-height: 120px; /* Set a maximum height */
-    width: auto; /* Maintain aspect ratio */
+    max-height: 120px;
+    width: auto;
 }
 
-/* Social icons styling */
+/* Social icons */
 .social-icons a {
-    color: #030303; /* White color for icons */
-    font-size: 30px; /* Size of the icons */
-    transition: color 0.3s; /* Smooth color transition */
+    color: #030303;
+    font-size: 30px;
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #d2b157; /* Change color on hover */
+    color: #d2b157;
 }
 
-/* Map container styling */
+/* Map container */
 .map-container {
-    margin-top: 10px; /* Space between title and map */
-    width: 100%; /* Ensure map takes full width */
+    margin-top: 10px;
+    width: 100%;
     position: relative;
-    padding-top: 56.25%; /* Aspect ratio for 16:9 */
+    padding-top: 56.25%;
     height: 170px;
     overflow: hidden;
 }
@@ -124,10 +114,10 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ensure iframe takes full width */
-    height: 100%; /* Ensure iframe takes full height */
-    border: 0; /* Remove border from iframe */
-    border-radius: 5px; /* Optional: Add rounded corners to the iframe */
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 5px;
 }
 
 /**************************** Footer Lists Styling */
@@ -135,83 +125,76 @@ footer .list-unstyled {
     list-style: none;
     padding: 0;
     margin: 0;
-    color: #000000; /* Ensure white text color for links */
+    color: #000000;
 }
 
 footer .list-unstyled li {
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 10px;
     font-size: 12px;
 }
 
-/* Footer links color */
 .footer-section ul.list-unstyled li a {
-    color: #000000 !important; /* Ensure links are white */
-    text-decoration: none !important; /* Remove underline from links */
+    color: #000000 !important;
+    text-decoration: none !important;
 }
 
-/* Change link color on hover */
 .footer-section ul.list-unstyled li a:hover {
-    color: #ffd000 !important; /* Change color on hover */
+    color: #ffd000 !important;
 }
 
 .no-border-right .footer-section {
-    border-right: none; /* Remove the right border for this specific column */
-}
-
-/* Ensure proper styling for the footer section in this column */
-.no-border-right {
-    border-right: none; /* Remove right border for this column */
+    border-right: none;
 }
 
 .no-padding-x {
-    padding-left: 0 !important; /* Remove left padding */
-    padding-right: 0 !important; /* Remove right padding */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .email {
     font-size: 15px;
 }
 
-/* Responsive Styling */
+/*************************** Responsive Styling */
 @media (max-width: 767px) {
     .footer-section {
         text-align: center;
-        border-right: none; /* Remove vertical lines on smaller screens */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Horizontal lines between sections */
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         padding-bottom: 10px;
     }
 
     .col-md-3 {
-        margin-bottom: 30px; /* Space between columns */
+        margin-bottom: 30px;
     }
 
     .footer-section .navbar-brand img {
-        max-height: 60px; /* Adjust logo size for small screens */
+        max-height: 60px;
     }
 
     footer .list-unstyled li {
         font-size: 16px;
     }
-    /* Increase font size for "Contact Us" specifically */
-        .footer-section h4, /* Target the "Contact Us" header */
-        .footer-section .list-unstyled li { /* Target all list items in the footer section */
-            font-size: 15px; /* Adjust the size as needed */
-        }
+
+    .footer-section h4,
+    .footer-section .list-unstyled li {
+        font-size: 15px;
+    }
 }
 
 /* Desktop Adjustments */
 @media (max-width: 1024px) {
     .footer-section {
-        padding: 10px; /* Adjust padding for larger screens */
+        padding: 10px;
     }
-    
+
     .navbar-brand img {
-        height: 50px; /* Increase logo size in navbar */
+        height: 50px;
     }
 
     .navbar-nav .nav-link {
-        font-size: 1.2rem; /* Increase font size of nav links */
-        padding: 10px 30px !important; /* Adjust padding for better spacing */
+        font-size: 1.2rem;
+        padding: 10px 30px !important;
     }
 
     .email {
@@ -225,7 +208,7 @@ footer .list-unstyled li {
 
 @media (min-width: 1025px) {
     .navbar-nav .nav-link {
-        font-size: 1.2rem; /* Increase font size of nav links */
-        padding: 10px 30px !important; /* Adjust padding for better spacing */
+        font-size: 1.2rem;
+        padding: 10px 30px !important;
     }
 }

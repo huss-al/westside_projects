@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block styles %}
@@ -7,17 +6,19 @@
 {% endblock %}
 
 {% block content %}
+<div class="banner">
+    <img src="{% static 'images/pexels-pavel-danilyuk-7937739.jpg' %}" alt="Welcome message">
+</div>
+<div class="content">
+    <h2>Main content</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laborum ab! Deleniti reiciendis sapiente enim quo deserunt vero, debitis labore perspiciatis quas similique vel repellendus optio, sit non accusantium eos.</p>
+</div>
+{% endblock %}
 
-<body>
-    <header>
-        <h1>Welcome to Our Website</h1>
-    </header>
-    <main>
-        <p>This is the home page. Here you can provide information about your services.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Company Name</p>
-    </footer>
-</body>
-</html>
+{% block extra_js %}
+<script>
+    $(window).scroll(function(){
+        $(".banner-text").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+</script>
 {% endblock %}

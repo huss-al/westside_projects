@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 1000px;
+    font-family: Poppins, sans-serif; /* Ensure correct font-family */
+}
+
+.banner {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;    width: 100%;
+    height: 70vh; /* Set height of the banner */
+    opacity: 1;
+    text-align: center;    
+    font-size: 50px;
+    font-weight: bold;
+    color: #fefefe;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.banner img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the banner area */
+    display: block; /* Prevent bottom whitespace on image */
+}
+
+
+.content {
+    width: 100%; /* Full width */
+    margin: auto;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 50px;
+}
