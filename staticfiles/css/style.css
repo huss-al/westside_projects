@@ -150,6 +150,8 @@ footer .list-unstyled li {
 
 /*************************** Responsive Styling */
 @media (max-width: 767px) {
+
+
     .footer-section {
         text-align: center;
         border-right: none;
