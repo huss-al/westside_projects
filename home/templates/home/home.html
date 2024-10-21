@@ -9,26 +9,17 @@
 <div class="banner">
     <img src="{% static 'images/pexels-pavel-danilyuk-7937739.jpg' %}" alt="Welcome message">
 </div>
-<div class="content" id="main-content">
-    <h2>Welcome</h2>
-    <p>Designing bespoke homes for modern living</p>
+<div class="banner-text" id="banner-text">
+    <h2>Designing bespoke homes for modern living</h2>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        window.addEventListener('scroll', function() {
-            const content = document.getElementById('main-content');
-            const contentPosition = content.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight;
-
-            // Check if the content is in the viewport
-            if (contentPosition < screenPosition) {
-                setTimeout(() => {
-                    content.classList.add('visible');
-                }, 900); // Delay in milliseconds
-            }
-        });
+        // Add the effect for the banner text
+        setTimeout(() => {
+            const bannerText = document.getElementById('banner-text');
+            bannerText.classList.add('visible');
+        }, 600); // Delay for banner-text in milliseconds (adjust as needed)
     });
 </script>
 {% endblock %}
-
