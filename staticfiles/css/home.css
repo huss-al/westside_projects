@@ -6,51 +6,44 @@ body {
 
 .banner {
     position: relative;
-    margin-top: 70px;
-    margin-bottom: 70px;    
     width: 100%;
-    height: 90vh; /* Set height of the banner */
-    opacity: 1;
-    text-align: center;    
-    font-size: 50px;
-    font-weight: bold;
-    color: #fefefe;
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .banner img {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     object-fit: cover; /* Cover the banner area */
-    display: block; /* Prevent bottom whitespace on image */
+    position: absolute; /* Position image absolutely */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place image behind text */
 }
 
-
-.content {
-    margin: 0;
-    width: 100%; /* Full width */
-    margin: auto;
-    text-align: center;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(5px); /* Slightly move down */
-    transition: opacity 4s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
-}
-
-.content h2 {
+.banner-text {
+    position: absolute; /* Place the text absolutely on the banner */
+    bottom: 50px; /* Place the text at the bottom */
+    width: 90%; /* Ensure the text container spans the full width */
+    color: rgb(255, 255, 255); /* Set the text color */
+    z-index: 10; /* Place text above the image */
     font-size: 50px;
+    font-weight: 800;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly move down for the effect */
+    transition: opacity 1.5s ease-in-out, transform 1.8s ease-in-out; /* Smooth transition */
+    margin-left: 10px;
 }
 
-.content.visible {
+.banner-text.visible {
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Move back to original position */
-    margin-bottom: 100px;
-    text-align: center;
 }
 
-p {
-    width: 80%; /* Keep this to control the width */
-    margin: 0 auto; /* Center it horizontally */
-    text-align: center; /* Center text inside the paragraph */
+.banner-text h2 {
+    font-size: 30px; /* Adjust font size for the paragraph */
+    font-weight: 800;
+
 }

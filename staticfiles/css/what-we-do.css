@@ -1,0 +1,67 @@
+
+.what-we-do {
+    margin-top: 100px;
+}
+
+.section {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 30px; /* Space between sections */
+}
+
+.text {
+    flex: 1; /* Take up equal space */
+    padding: 20px; /* Padding around text */
+}
+
+.image {
+    flex: 1; /* Take up equal space */
+}
+
+.image img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.center-image {
+    flex-direction: column; /* Center image on top */
+    text-align: center; /* Center text underneath */
+}
+
+.center-image .image {
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .image {
+        margin-bottom: 10px; /* Add space below images */
+    }
+
+    /* Adjust order of text and image for smaller screens */
+    .section:nth-child(1) .text {
+        order: 2; /* Move text to below image */
+    }
+    .section:nth-child(1) .image {
+        order: 1; /* Keep image at the top */
+    }
+    .section:nth-child(2) .text {
+        order: 4; /* Move text to below image */
+    }
+    .section:nth-child(2) .image {
+        order: 3; /* Keep image at the top */
+    }
+    .section:nth-child(3) .text {
+        order: 6; /* Move text to below image */
+    }
+    .section:nth-child(3) .image {
+        order: 5; /* Keep image at the top */
+    }
+}
