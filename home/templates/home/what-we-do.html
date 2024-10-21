@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/what-we-do.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="what-we-do">
+    <!-- Section 1: Text on left, Image on right -->
+    <div class="section">
+        <div class="text">
+            <h2>Step 1</h2>
+            <p>We specialize in creating bespoke homes tailored to your needs and preferences. Our team is dedicated to delivering high-quality craftsmanship and innovative designs.</p>
+        </div>
+        <div class="image">
+            <img src="{% static 'images/pexels-lexovertoom-1109541.jpg' %}" alt="Description of the image 1">
+        </div>
+    </div>
+
+    <!-- Section 2: Image on left, Text on right -->
+    <div class="section">
+        <div class="image">
+            <img src="{% static 'images/pexels-tima-miroshnichenko-6474300.jpg' %}" alt="Description of the image 2">
+        </div>
+        <div class="text">
+            <h2>Step 2</h2>
+            <p>Our approach is collaborative, ensuring that your vision is brought to life through careful planning and execution. We take pride in our attention to detail and customer satisfaction.</p>
+        </div>
+    </div>
+
+    <!-- Section 3: Image in the middle with text underneath -->
+    <div class="section center-image">
+        <div class="image">
+            <img src="{% static 'images/pexels-aaron-cook-817377601-19277901.jpg' %}" alt="Description of the image 3">
+        </div>
+        <div class="text">
+            <h2>Step 3</h2>
+            <p>Explore our portfolio to see the variety of projects we have completed. Each project reflects our commitment to quality and design excellence.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
