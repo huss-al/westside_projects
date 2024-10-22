@@ -10,9 +10,8 @@
     padding: 60px 20px; /* Padding adjusted to add space */
     border-radius: 10px;
     text-align: center;
-    max-width: 800px;
+    max-width: 1400px;
     margin: 100px auto; /* Adds space above and below the container */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
