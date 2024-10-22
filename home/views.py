@@ -1,5 +1,4 @@
 from django.shortcuts import render
-import cloudinary.api
 
 
 # Create your views here.
@@ -13,3 +12,9 @@ def what_we_do(request):
 
 def gallery_view(request):
     return render(request, 'home/projects.html')
+
+def about_view(request):
+    return render(request, 'home/about.html')
+
+def contact_view(request):
+    return render(request, 'home/contact.html')

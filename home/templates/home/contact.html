@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="contact-us">
+    <div class="info">
+        <h1>Contact Us</h1>
+        <h5>Have a question or a query?</h5>
+        <p>If you have any questions or would like to discuss your project, please fill out the form, and we will get back to you as soon as possible.</p>
+
+        <h5>Or get in touch directly.</h5>
+        <p>07590105538</p>
+        <p>chris@gmail.com</p>
+
+    </div>
+
+    <div class="form-container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="interest">I'm Interested In</label>
+                <select id="interest" name="interest" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date of Planning</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Send</button>
+            </div>        
+        </form>
+    </div>
+</div>
+{% endblock %}
