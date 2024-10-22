@@ -15,6 +15,7 @@ import dj_database_url  # Import this at the top of your settings.py
 import os
 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-=t6&wjk)nr_-@tued=dhf!9beska5v#fdhtyr92#h$fn0yw-o!"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -138,14 +139,6 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-
-# Cloudinary settings
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dqo3vn07c',
-    'API_KEY': '242484246215387',
-    'API_SECRET': 'bka3NVrGVNU8D5G5HlZzsKL9mUs',
-}
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

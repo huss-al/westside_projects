@@ -1,0 +1,37 @@
+.gallery {
+    margin: 0 auto;
+    padding: 60px;
+    margin-top: 80px;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Change this color to match your theme */
+    margin-bottom: 30px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 images in a row */
+    gap: 30px; /* Space between images */
+}
+
+.image-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Stack images on top of each other */
+    }
+
+    .gallery {
+        padding: 20px;
+    }
+}
+
+

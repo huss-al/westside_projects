@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', home, name='home'),  # Route for the home page
-        path('what-we-do/', views.what_we_do, name='what_we_do'),
+    path('what-we-do/', views.what_we_do, name='what_we_do'),
+    path('gallery/', views.gallery_view, name='gallery'),
 
 ]
